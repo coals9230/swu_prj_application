@@ -66,6 +66,7 @@ public class SecurityConfig {
                 (csrf) -> csrf.ignoringRequestMatchers(
                     new AntPathRequestMatcher("/api/**")
                     , new AntPathRequestMatcher("/users/login")
+                    , new AntPathRequestMatcher("/products")
                 )
             )
 //                (csrf) ->
