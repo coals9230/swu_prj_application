@@ -28,7 +28,7 @@ public class SecurityConfig {
                     new AntPathRequestMatcher("/**")
                 ).permitAll()
             )
-            .csrf(AbstractHttpConfigurer::disable)  // CSRF 보호 비활성화
+            .csrf().disable()  // CSRF 보호 비활성화
             .headers(headers -> 
                 headers.addHeaderWriter(
                     new XFrameOptionsHeaderWriter(
